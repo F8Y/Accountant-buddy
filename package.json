@@ -1,0 +1,23 @@
+{
+  "name": "acc-buddy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Локальный AI-помощник для бухгалтеров с RAG по российскому законодательству",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run tauri:dev --workspace=desktop",
+    "build": "npm run tauri:build --workspace=desktop",
+    "tauri:dev": "npm run tauri:dev --workspace=desktop",
+    "tauri:build": "npm run tauri:build --workspace=desktop",
+    "docker:up": "docker compose -f docker-compose.dev.yml up -d",
+    "docker:down": "docker compose -f docker-compose.dev.yml down",
+    "docker:logs": "docker compose -f docker-compose.dev.yml logs -f",
+    "docker:reset": "docker compose -f docker-compose.dev.yml down -v"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}
